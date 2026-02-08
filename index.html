@@ -6,24 +6,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/dark.css">
   <style>
-    /* Увеличиваем кнопку меню для удобства */
+    /* Кнопка меню слева сверху */
     .sidebar-toggle {
-      background: rgba(0,0,0,0.5);
-      width: 44px;
-      height: 44px;
-      padding: 10px;
+      top: 10px !important;
+      bottom: auto !important;
+      left: 10px !important;
+      background: #ffaa00 !important; /* Оранжевая, чтобы видно было */
+      border-radius: 5px;
+      width: 40px;
+      height: 40px;
+      padding: 5px;
+    }
+    /* Чтобы текст не налезал на кнопку */
+    .content {
+      padding-top: 60px !important;
     }
   </style>
 </head>
 <body>
-  <div id="app">Загрузка архивов...</div>
+  <div id="app">Загрузка...</div>
   <script>
     window.$docsify = {
       name: 'Backrooms Wiki',
       loadSidebar: true,
       subMaxLevel: 2,
-      auto2top: true,
-      // Настройка чтобы меню было удобнее
+      // Авто-раскрытие меню
       alias: {
         '/.*/_sidebar.md': '/_sidebar.md'
       }
