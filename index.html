@@ -5,16 +5,28 @@
   <title>Simple Backrooms Survival Wiki</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/dark.css">
+  <style>
+    /* Увеличиваем кнопку меню для удобства */
+    .sidebar-toggle {
+      background: rgba(0,0,0,0.5);
+      width: 44px;
+      height: 44px;
+      padding: 10px;
+    }
+  </style>
 </head>
 <body>
-  <div id="app">Загрузка...</div>
+  <div id="app">Загрузка архивов...</div>
   <script>
     window.$docsify = {
       name: 'Backrooms Wiki',
-      repo: '',
       loadSidebar: true,
       subMaxLevel: 2,
-      auto2top: true
+      auto2top: true,
+      // Настройка чтобы меню было удобнее
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md'
+      }
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
