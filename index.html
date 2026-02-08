@@ -6,30 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/dark.css">
   <style>
-    /* Твоя большая удобная кнопка слева сверху */
+    /* Большая кнопка слева сверху */
     .sidebar-toggle {
       top: 10px !important;
-      bottom: auto !important;
       left: 10px !important;
       background: #ffaa00 !important;
-      border-radius: 5px;
-      width: 45px !important;
-      height: 45px !important;
+      width: 50px !important;
+      height: 50px !important;
       display: flex !important;
-      align-items: center;
-      justify-content: center;
+      z-index: 999;
     }
-    /* Исправляем отступы, чтобы текст не закрывала кнопка */
-    body.close .sidebar-toggle {
-      width: 45px !important;
+    /* Делаем меню видимым на темном фоне */
+    .sidebar {
+      background-color: #222 !important;
+      color: #fff !important;
     }
-    .content {
-      padding-top: 60px !important;
-    }
-    /* Цвет текста в меню, чтобы его было видно */
     .sidebar ul li a {
-      color: #eee !important;
-      font-size: 16px;
+      color: #fff !important;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -38,13 +32,11 @@
   <script>
     window.$docsify = {
       name: 'Backrooms Wiki',
-      loadSidebar: true, // ВКЛЮЧАЕМ МЕНЮ
-      autoHeader: true,
-      subMaxLevel: 3,
-      // Этот блок исправляет твою проблему с пустым меню:
+      loadSidebar: true, // Это включает файл _sidebar.md
       alias: {
-        '/.*/_sidebar.md': '/_sidebar.md'
-      }
+        '/.*/_sidebar.md': '/_sidebar.md' // Путь к меню
+      },
+      subMaxLevel: 2
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
